@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+<script src="JSxmlPPTGen.js" type="text/javascript"></script>
+</head>
+<body onload="init();">
+    <textarea id="res" style="display:none;"></textarea>
+<div style="position:relative;">
+<div style="position:absolute; top:5px; left:5px; width:49%;">
+<fieldset>
+<legend id="SlideGenerator" style="background-color: Gray; color: White">Slide Demo</legend>
+<form id="slideView">
+<input id="demo" type="button" value="Slide Demo"  onclick="selectView(0)" style="visibility:hidden;"/>
+<input id="preview"  type="button" value="Show Preview"  onclick="selectView(1)"/>
+<input id="code"  type="button" value="Show Code"  onclick="selectView(2)"/>
+</form>
+<div id="slidePreview" style="display:none; height:450px; width:100%"></div>
+<div id="slideCode" style="display:none; height:450px; width:100%"><textarea id="slideCodeTxt" style="height:100%; width:100%"></textarea></div>
+<iframe id="slideDemo" style="display:block;height:450px; width:100%"></iframe>
+</fieldset>
+</div>
+<div style="position:absolute; top:5px; right:5px; width:49%;">
+<fieldset id="genView">
+<legend id="SlideGenerator" style="background-color: Gray; color: White">Slide Generator</legend>
+<form id="f1" style="height:350px;">
+<select id="slideLayout" onchange="selectSlide()">
+<option id="TitleSlide">Title Slide</option>
+<option id="TitleOnly">Title Only</option>
+<option id="TitleText">Text Only</option>
+<option id="Title2Col">2 Text Columns</option>
+<option id="TitleImg">Image Only</option>
+<option id="Title2Img">2 Image Columns</option>
+<option id="TitleVerTxtImg">Text|Image Column</option>
+<option id="TitleVerImgTxt">Image|Text Column</option>
+<option id="TitleHorTxtImg">Text|Image Row</option>
+<option id="TitleHorImgTxt">Image|Text Row</option>
+</select>&nbsp;&nbsp;
+<input type='button' value='New Slide' onClick='newSlide();'>&nbsp;&nbsp;
+<input type='button' value='Add Slide' onClick='addSlide();'>&nbsp;&nbsp;
+<input type='button' value='Finish' onClick='finishPPT();'>
+<div id="slideTool" style="height:450px;">
+</div>
+</form>
+</fieldset>
+</div>
+</div>
+</body>
+</html>
